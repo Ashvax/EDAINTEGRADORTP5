@@ -63,6 +63,7 @@ public class Arbol {
         List<Nodo> nivelActual = new ArrayList<>();
         nivelActual.add(rey);
         int nivelMax = 0;
+        int pasos = -1;
         while (!nivelActual.isEmpty()) {
             List<Nodo> proximoNivel = new ArrayList<>();
             for (Nodo actual : nivelActual) {
@@ -76,7 +77,9 @@ public class Arbol {
             }
             nivelActual = proximoNivel;
             nivel++;
+            pasos++;
         }
+        System.out.println("Pasos Desde El Rey Hasta El Subdito Mas Lejano: "+pasos);
         return masLejano;
     }
 
