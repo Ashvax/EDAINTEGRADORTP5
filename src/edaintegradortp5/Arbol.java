@@ -40,9 +40,12 @@ public class Arbol {
         }
         List<Nodo> nivelActual = new ArrayList<>();
         nivelActual.add(rey);
+        int nivel = 0;
         while (!nivelActual.isEmpty()) {
             List<Nodo> proximoNivel = new ArrayList<>();
+            System.out.print("Nivel: "+nivel +" - ");
             for (Nodo actual : nivelActual) {
+                
                 System.out.print(actual.getNombre() + " ");   
                 for (Nodo amigo : actual.getAmigos()) {
                     proximoNivel.add(amigo);
@@ -50,6 +53,7 @@ public class Arbol {
             }
             System.out.println("");
             nivelActual = proximoNivel;
+            nivel++;
         }
     }
 
