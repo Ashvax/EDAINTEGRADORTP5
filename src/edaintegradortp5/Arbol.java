@@ -45,7 +45,6 @@ public class Arbol {
             List<Nodo> proximoNivel = new ArrayList<>();
             System.out.print("Nivel: "+nivel +" - ");
             for (Nodo actual : nivelActual) {
-                
                 System.out.print(actual.getNombre() + " ");   
                 for (Nodo amigo : actual.getAmigos()) {
                     proximoNivel.add(amigo);
